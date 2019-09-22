@@ -6,7 +6,8 @@ My configuration files for multiple shell programs.
 ### Installation
 
 Utilities for memory checks + default config:
-> ```bash
+
+```bash
 cp -r tmux/tmux_scripts ~/.tmux_scripts
 cp tmux/tmux.conf ~/.tmux.conf
 ```
@@ -15,7 +16,7 @@ cp tmux/tmux.conf ~/.tmux.conf
 
 ### Installation
 
-> ```bash
+```bash
 mkdir -p ~/.config/nvim
 cp configs/neovim/init.vim ~/.config/nvim/init.vim
 ```
