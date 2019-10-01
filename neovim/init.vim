@@ -38,7 +38,7 @@ call plug#end()
 let g:python3_host_prog = 'python'
 
 " Auto completion
-" disable autocompletion, because we use deoplete for completion
+" disable auto completion, because we use deoplete for completion
 " let g:jedi#completions_enabled = 0
 
 let g:deoplete#enable_at_startup = 1
@@ -86,6 +86,11 @@ call deoplete#custom#var('omni', 'input_patterns', {
 let g:vimtex_complete_enabled = 1
 
 let g:languagetool_jar='/usr/local/LanguageTool/languagetool-commandline.jar'
+
+" spell languages
+set spelllang=en
+nnoremap <silent> <C-s> :set spell!<cr>
+inoremap <silent> <C-s> <C-O>:set spell!<cr>
 
 set mouse=a
 
