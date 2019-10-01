@@ -30,7 +30,7 @@ Plug 'honza/vim-snippets'
 Plug 'lervag/vimtex'
 
 " Language tool integration
-Plug 'dpelle/vim-LanguageTool'
+Plug 'vigoux/LanguageTool.nvim'
 
 call plug#end()
 
@@ -85,12 +85,17 @@ call deoplete#custom#var('omni', 'input_patterns', {
 
 let g:vimtex_complete_enabled = 1
 
-let g:languagetool_jar='/usr/local/LanguageTool/languagetool-commandline.jar'
-
 " spell languages
 set spelllang=en
 nnoremap <silent> <C-s> :set spell!<cr>
 inoremap <silent> <C-s> <C-O>:set spell!<cr>
+
+" grammar checking
+autocmd Filetype markdown LanguageToolSetUp
+autocmd Filetype tex LanguageToolSetUp
+let g:languagetool_server='/usr/local/LanguageTool/languagetool-server.jar'
+nnoremap <silent> <C-g> :LanguageToolCheck<cr>
+
 
 set mouse=a
 
