@@ -18,6 +18,6 @@ cp tmux/tmux.conf ~/.tmux.conf
 
 ```bash
 mkdir -p ~/.config/nvim
-cp configs/neovim/init.vim ~/.config/nvim/init.vim
+cp neovim/init.vim ~/.config/nvim/init.vim
 ```
 
