@@ -93,7 +93,7 @@ inoremap <silent> <C-s> <C-O>:set spell!<cr>
 " grammar checking
 autocmd Filetype markdown LanguageToolSetUp
 autocmd Filetype tex LanguageToolSetUp
-let g:languagetool_server='/usr/local/LanguageTool/languagetool-server.jar'
+let g:languagetool_server_jar='/usr/local/LanguageTool/languagetool-server.jar'
 nnoremap <silent> <C-g> :LanguageToolCheck<cr>
 
 
