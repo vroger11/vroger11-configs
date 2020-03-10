@@ -84,6 +84,24 @@ call deoplete#custom#var('omni', 'input_patterns', {
       \})
 
 let g:vimtex_complete_enabled = 1
+" configure latex compilation, mainly add shell-escape to be able to use svg
+" files as graphics
+let g:vimtex_compiler_latexmk = {
+    \ 'backend' : 'nvim',
+    \ 'background' : 1,
+    \ 'build_dir' : '',
+    \ 'callback' : 1,
+    \ 'continuous' : 1,
+    \ 'executable' : 'latexmk',
+    \ 'hooks' : [],
+    \ 'options' : [
+    \   '-verbose',
+    \   '-file-line-error',
+    \   '-synctex=1',
+    \   '-interaction=nonstopmode',
+    \   '-shell-escape',
+    \ ],
+\}
 
 " spell languages
 set spelllang=en

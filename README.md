@@ -6,8 +6,12 @@ My configuration files for multiple shell programs.
 ### Installation
 
 ```bash
+cp ~/.bashrc ~/.bashrc_bak  # create a backup of your previous config
 cp bash/bashrc ~/.bashrc
 ```
+
+### Explanation
+[Look here.](http://website.vincent-roger.fr/tips/dev/2020/01/29/improve-bash-terminal-experience.html)
 
 ## Tmux
 
