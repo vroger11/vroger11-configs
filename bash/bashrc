@@ -153,3 +153,8 @@ bind "set completion-ignore-case on"
 bind "set menu-complete-display-prefix on"
 # colored completion, for folders and others
 bind 'set colored-stats on' 
+
+# automatically open tmux when using ssh connection without X server
+if [ ! -z "$SSH_CLIENT" ] && [ -z "$DESKTOP_SESSION" -a -z "$TMUX" ] ; then
+    tmux attach -t "ssh" 2> /dev/null || tmux new -s "ssh"
+fi
