@@ -30,7 +30,7 @@ Plug 'honza/vim-snippets'
 Plug 'lervag/vimtex'
 
 " Language tool integration
-Plug 'vigoux/LanguageTool.nvim'
+" Plug 'vigoux/LanguageTool.nvim'
 
 call plug#end()
 
@@ -108,11 +108,11 @@ set spelllang=en
 nnoremap <silent> <C-s> :set spell!<cr>
 inoremap <silent> <C-s> <C-O>:set spell!<cr>
 
-" grammar checking
-autocmd Filetype markdown LanguageToolSetUp
-autocmd Filetype tex LanguageToolSetUp
-let g:languagetool_server_jar='/usr/local/LanguageTool/languagetool-server.jar'
-nnoremap <silent> <C-g> :LanguageToolCheck<cr>
+" grammar checking (I replaced it with antidote)
+" autocmd Filetype markdown LanguageToolSetUp
+" autocmd Filetype tex LanguageToolSetUp
+" let g:languagetool_server_jar='/usr/local/LanguageTool/languagetool-server.jar'
+" nnoremap <silent> <C-g> :LanguageToolCheck<cr>
 
 
 set mouse=a
