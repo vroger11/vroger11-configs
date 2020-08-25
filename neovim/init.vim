@@ -103,6 +103,8 @@ let g:vimtex_compiler_latexmk = {
     \ ],
 \}
 
+let g:tex_flavor = 'latex'
+
 " spell languages
 set spelllang=en
 nnoremap <silent> <C-s> :set spell!<cr>
