@@ -1,4 +1,4 @@
-" Copyright 2019 Vincent ROGER
+" Copyright 2020 Vincent ROGER
 
 " Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ''Software'''), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -114,6 +114,10 @@ inoremap <silent> <C-s> <C-O>:set spell!<cr>
 " let g:languagetool_server_jar='/usr/local/LanguageTool/languagetool-server.jar'
 " nnoremap <silent> <C-g> :LanguageToolCheck<cr>
 
+" copy to clipboard when using Ctrl+c
+vmap <C-c> "+y<cr>
+" select all document
+nmap <C-a> ggVG
 
 set mouse=a
 
