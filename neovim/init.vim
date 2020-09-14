@@ -136,3 +136,11 @@ set nowritebackup
 " search configuration
 set smartcase
 
+"Autocommand when quitting tex doc to clean building files
+augroup autocom
+    autocmd!
+    "executes the command on quit
+     autocmd VimLeave *.tex VimtexClean
+augroup END
+
+
