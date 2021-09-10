@@ -10,11 +10,17 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " fast auto completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+Plug 'davidhalter/jedi-vim'
+
+"
+" Python plugins
+"
 " python help
-Plug 'zchee/deoplete-jedi'
-" Plug 'davidhalter/jedi-vim'
+"Plug 'zchee/deoplete-jedi'
 " pylint
-Plug 'neomake/neomake'
+"Plug 'neomake/neomake'
+
 " double quote, parenthesis ...
 Plug 'jiangmiao/auto-pairs'
 " Ctrl+n for tree
@@ -37,30 +43,35 @@ call plug#end()
 " To be compatible with anaconda for python3
 let g:python3_host_prog = 'python'
 
+"
+" Python plugins
+"
 " Auto completion
 " disable auto completion, because we use deoplete for completion
 " let g:jedi#completions_enabled = 0
 
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#jedi#show_docstring = 1
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#sources#jedi#show_docstring = 1
+
+" pylint checking
+" let g:neomake_python_enabled_makers = ['pylint']
+" call neomake#configure#automake('nrwi', 500)
+
 " Bind Ctrl-Space to force autocomplete
-inoremap <expr> <C-Space>  deoplete#manual_complete()
+" inoremap <expr> <C-Space>  deoplete#manual_complete()
 " doc of deoplete is shown bollow instead of top
-set splitbelow
+" set splitbelow
 
 " use tab to forward cycle among windows
-inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " use tab to backward cycle among windows
-inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+" inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 " Close the documentation window when completion is done
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
 nmap <C-n> :NERDTreeToggle<CR>
 
-" pylint checking
-let g:neomake_python_enabled_makers = ['pylint']
-call neomake#configure#automake('nrwi', 500)
 " line number ro the left
 set number
 " remove trailing whitespace on saving
