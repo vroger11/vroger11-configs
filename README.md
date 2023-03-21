@@ -30,6 +30,8 @@ git clone  https://github.com/zsh-users/zsh-autosuggestions ~/git/zsh_plugins/zs
 
 cp zsh/zshrc ~/.zshrc
 cp zsh/p10k.zsh ~/.p10k.zsh
+
+chsh -s $(which zsh) # change default shell to zsh
 ```
 
 ## Tmux
