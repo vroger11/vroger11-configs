@@ -13,6 +13,25 @@ cp bash/bashrc ~/.bashrc
 ### Explanation
 [Look here.](http://website.vincent-roger.fr/tips/dev/2020/01/29/improve-bash-terminal-experience.html)
 
+
+## zsh
+
+### Installation
+Note: this will change your default shell.
+
+```bash
+cp ~/.zshrc ~/.zshrc_bak
+
+# clone plugins for my config
+mkdir -p ~/git/zsh_plugins/
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/git/zsh_plugins/powerlevel10k
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/git/zsh_plugins/zsh-syntax-highlighting
+git clone  https://github.com/zsh-users/zsh-autosuggestions ~/git/zsh_plugins/zsh-autosuggestions
+
+cp zsh/zshrc ~/.zshrc
+cp zsh/p10k.zsh ~/.p10k.zsh
+```
+
 ## Tmux
 
 ### Installation
