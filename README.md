@@ -22,13 +22,11 @@ Note: this will change your default shell.
 ```bash
 cp ~/.zshrc ~/.zshrc_bak
 
-# clone plugins for my config
-mkdir -p ~/git/zsh_plugins/
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/git/zsh_plugins/powerlevel10k
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/git/zsh_plugins/zsh-syntax-highlighting
-git clone  https://github.com/zsh-users/zsh-autosuggestions ~/git/zsh_plugins/zsh-autosuggestions
+# Use antidote for plugin management
+git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.antidote
 
 cp zsh/zshrc ~/.zshrc
+cp zsh/zsh_plugins.txt ~/.zsh_plugins.txt
 cp zsh/p10k.zsh ~/.p10k.zsh
 
 chsh -s $(which zsh) # change default shell to zsh
