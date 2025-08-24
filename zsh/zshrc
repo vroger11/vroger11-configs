@@ -13,7 +13,12 @@ bindkey -e
 zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
-compinit
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit -C    # use cache if less than 24h old
+else
+  compinit
+fi
+
 # End of lines added by compinstall
 
 # zsh plugins
