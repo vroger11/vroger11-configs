@@ -32,6 +32,8 @@ alias cp="cp -i"
 # Show sizes in MB
 alias free='free -m'
 
+# Bind Suppr key to delete character instead of inserting ~
+bindkey "^[[3~" delete-char
 
 # Don't consider certain characters part of the word
 WORDCHARS=${WORDCHARS//\/[&.;]}
