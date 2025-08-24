@@ -53,9 +53,14 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' rehash true                              # automatically find new executables in path
 
-
 # delete previous word with ctrl+backspace
 bindkey '^H' backward-kill-word
-# Don't save commands that start with space
-setopt histignorespace
 
+# Home and End key binding
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+
+# History config
+setopt hist_ignore_dups     # no duplicates
+setopt hist_ignore_space    # ignore commands starting with space
+setopt share_history        # share history across sessions
