@@ -61,4 +61,5 @@ bindkey '^[[F' end-of-line
 # History config
 setopt hist_ignore_dups     # no duplicates
 setopt hist_ignore_space    # ignore commands starting with space
-setopt share_history        # share history across sessions
+# setopt share_history        # share history across sessions
+
