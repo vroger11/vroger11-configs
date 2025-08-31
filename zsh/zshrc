@@ -24,6 +24,10 @@ zstyle :prompt:pure:git:stash show yes
 prompt_newline=$(echo -n " \u200B") # single line prompt
 PURE_PROMPT_NEW_LINE=false
 
+# Remote colors
+zstyle :prompt:pure:user color yellow
+zstyle :prompt:pure:host color yellow
+
 # Path (rainbow: blue → cyan → magenta)
 zstyle :prompt:pure:path color blue
 zstyle :prompt:pure:path color_path cyan
