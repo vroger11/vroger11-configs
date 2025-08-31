@@ -28,17 +28,13 @@ PURE_PROMPT_NEW_LINE=false
 zstyle :prompt:pure:user color yellow
 zstyle :prompt:pure:host color yellow
 
-# Path (rainbow: blue → cyan → magenta)
 zstyle :prompt:pure:path color blue
-zstyle :prompt:pure:path color_path cyan
-zstyle :prompt:pure:path color_path_root magenta
 
 # Git branch (green when clean, yellow modified, red conflicted)
 zstyle :prompt:pure:git:branch color green
 zstyle :prompt:pure:git:dirty color yellow
 zstyle :prompt:pure:git:clean color green
 zstyle :prompt:pure:git:conflicted color red
-zstyle :prompt:pure:git:branch format '⎇ %b'
 
 # Prompt symbol (rainbow accent)
 zstyle :prompt:pure:prompt:success color cyan
