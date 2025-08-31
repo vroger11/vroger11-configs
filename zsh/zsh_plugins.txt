@@ -1,4 +1,5 @@
-romkatv/powerlevel10k
-zsh-users/zsh-autosuggestions kind:defer
-zdharma-continuum/fast-syntax-highlighting kind:defer
+sindresorhus/pure
+zsh-users/zsh-autosuggestions
+zdharma-continuum/fast-syntax-highlighting
 zsh-users/zsh-completions
+

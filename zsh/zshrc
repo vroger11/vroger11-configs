@@ -19,10 +19,35 @@ else
   compinit
 fi
 
-# End of lines added by compinstall
+# Theme config
+zstyle :prompt:pure:git:stash show yes
+prompt_newline=$(echo -n " \u200B") # single line prompt
+PURE_PROMPT_NEW_LINE=false
 
-# zsh plugins
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Path (rainbow: blue → cyan → magenta)
+zstyle :prompt:pure:path color blue
+zstyle :prompt:pure:path color_path cyan
+zstyle :prompt:pure:path color_path_root magenta
+
+# Git branch (green when clean, yellow modified, red conflicted)
+zstyle :prompt:pure:git:branch color green
+zstyle :prompt:pure:git:dirty color yellow
+zstyle :prompt:pure:git:clean color green
+zstyle :prompt:pure:git:conflicted color red
+zstyle :prompt:pure:git:branch format '⎇ %b'
+
+# Prompt symbol (rainbow accent)
+zstyle :prompt:pure:prompt:success color cyan
+zstyle :prompt:pure:prompt:success symbol '❯'
+zstyle :prompt:pure:prompt:error color red
+zstyle :prompt:pure:prompt:error symbol '❯'
+
+# Execution time (yellow block, like p10k’s timer segment)
+zstyle :prompt:pure:execution_time color yellow
+# no nix-shell
+zstyle :prompt:pure:environment:nix-shell show no
+
+# End of lines added by compinstall
 
 alias ls='ls --color=auto'
 # Confirm before overwriting something
@@ -61,5 +86,4 @@ bindkey '^[[F' end-of-line
 # History config
 setopt hist_ignore_dups     # no duplicates
 setopt hist_ignore_space    # ignore commands starting with space
-# setopt share_history        # share history across sessions
 
