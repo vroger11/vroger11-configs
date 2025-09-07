@@ -2,6 +2,8 @@
 source ~/.antidote/antidote.zsh
 antidote load < ~/.zsh_plugins.txt
 
+eval "$(starship init zsh)"
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -18,34 +20,6 @@ if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
 else
   compinit
 fi
-
-# Theme config
-zstyle :prompt:pure:git:stash show yes
-prompt_newline=$(echo -n " \u200B") # single line prompt
-PURE_PROMPT_NEW_LINE=false
-
-# Remote colors
-zstyle :prompt:pure:user color yellow
-zstyle :prompt:pure:host color yellow
-
-zstyle :prompt:pure:path color blue
-
-# Git branch (green when clean, yellow modified, red conflicted)
-zstyle :prompt:pure:git:branch color green
-zstyle :prompt:pure:git:dirty color yellow
-zstyle :prompt:pure:git:clean color green
-zstyle :prompt:pure:git:conflicted color red
-
-# Prompt symbol (rainbow accent)
-zstyle :prompt:pure:prompt:success color cyan
-zstyle :prompt:pure:prompt:success symbol '❯'
-zstyle :prompt:pure:prompt:error color red
-zstyle :prompt:pure:prompt:error symbol '❯'
-
-# Execution time (yellow block, like p10k’s timer segment)
-zstyle :prompt:pure:execution_time color yellow
-# no nix-shell
-zstyle :prompt:pure:environment:nix-shell show no
 
 # End of lines added by compinstall
 

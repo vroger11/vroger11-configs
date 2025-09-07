@@ -19,6 +19,10 @@ cp bash/bashrc ~/.bashrc
 ### Installation
 Note: this will change your default shell.
 
+
+Pre-requisite, you need to install starship theme by following the official guide:
+https://github.com/starship/starship?tab=readme-ov-file#%F0%9F%9A%80-installation
+
 ```bash
 cp ~/.zshrc ~/.zshrc_bak
 
@@ -27,7 +31,7 @@ git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.antidote
 
 cp zsh/zshrc ~/.zshrc
 cp zsh/zsh_plugins.txt ~/.zsh_plugins.txt
-cp zsh/p10k.zsh ~/.p10k.zsh
+cp zsh/starship.toml ~/.config/starship.toml
 
 chsh -s $(which zsh) # change default shell to zsh
 ```
